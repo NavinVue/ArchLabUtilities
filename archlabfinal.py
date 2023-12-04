@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @Time    : 2023/12
-# @Author  : 
+# @Author  : NavinVue
 # @FileName: archlabfinal.py
 """
 本程序旨在自动生成arch-lab的代码\\
-但是这里生成的只是一个粗略的代码，并且最终结果是无法满分的\\
+但是这里生成的只是一个粗略的代码，并且最终结果是无法满分的(需要更精巧的分支预测以及一些细节的修改)\\
 但是可以比较几种展开的CPE，帮助选择一个较为合适的展开。\\
 并且本程序的异常处理很弱，所以请使用者自己保证输入的值合理以及自己debug\\
 generate函数根据给定展开序列生成ncopy.ys可修改部分\\
 Writefile函数则生成ncopy.ys函数(可以结合相应指令快捷查看结果例如`(python3 archlabfinal.py; ./correctness.pl; ./benchmark; ./check-len.pl < ncopy.yo)`)\\
 seekBest函数会生成comparison.txt文件，根据函数里面给定的展开序列列表（需自己修改）产生CPE、correct、lenth检查结果\\
-（所以请将archlabfinal.py置于sim\pipe下）
+（所以请将archlabfinal.py置于sim\pipe下，且保证make ncopy.ys能够成功）
 """
 
 mysrc=["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight","Nine","Ten","Eleven"]
